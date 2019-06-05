@@ -49,6 +49,7 @@ install:	all
 
 lsocket.so: lsocket.o
 	$(CC) $(LDFLAGS) -o $@ $<
+	cp $(ALL) ../../luaclib/$(ALL)
 
 async_resolver.so: async_resolver.o gai_async.o
 	$(CC) $(LDFLAGS) -o $@ $^ $(PTHRFLAG)
